@@ -1,0 +1,15 @@
+input[name="mess"]{
+    height: 50px;
+}
+
+input[name="send"]{
+    height: 30px;
+}
+
+p[data-text="blueviolet"]{
+    color:blueviolet
+}
+
+p[data-text="pink"]{
+    color:pink
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>DOCUMENT</title>
+    </head>
+        <body>
+            <!--Формы Урок 8 по СтудиоПроВеб-->
+            <h1>REGISTRATION</h1>
+            <form name="signup" action="#" method="post">
+                <div>
+                    <label>Введите логин:</label>
+                    <input type="text" name="username" placeholder="напишите логин" />
+                </div>
+
+                <div>
+                    <label>Введите e-mail:</label>
+                    <input type="email" name="email" placeholder="напишите e-mail"/>
+                </div>
+
+                <div>
+                    <label>Введите пароль:</label>
+                    <input type="password" name="password" />
+                </div>
+                <div>
+                    <label>Укажите пол:</label>
+                    <input type="radio" name="sex" value="0" />Мужской
+                    <input type="radio" name="sex" value="1" />Женский
+                </div>   
+                <div>
+                    <label>Я ознакомлен(-а) с правилами:</label>
+                    <input type="checkbox" name="rules" />
+                </div>
+                <div>
+                    <label>Загрузите фото:</label>
+                    <input type="file" name="avatar" />
+                </div>
+                <div>
+                    <label>Год рождения:</label>
+                    <select name="year">
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                    </select>
+                </div> 
+                <div>
+                    <textarea placeholder="напишите о себе"></textarea>
+                </div>
+                <p><input type="submit" name="signup" value="зарегистрироваться"></p>
+                <p><input type="submit" name="signup" value="отправить"></p>
+            </form>
+        </body>
+</html>

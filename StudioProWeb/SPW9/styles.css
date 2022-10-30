@@ -1,0 +1,14 @@
+div {
+    background-color: blueviolet;
+    height: 200px;
+    width: 400px;
+}
+
+div p {
+      color: white;
+}
+ 
+ 
+div p span  {
+            font-size: 25px;
+}

@@ -1,0 +1,14 @@
+div{
+    width: 400px;
+    height: 400px;
+}
+
+.number1{
+        background-color:purple;
+        padding: 50px;
+        margin: 50px;
+}
+
+.number2{
+        background-color:pink;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auxpo</title>
     <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -29,10 +30,111 @@
                 </ul>
             </nav>
         </header>
-        <!--main part-->
         <main class="content-main">
-
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img class="swiper-slide__image" src="images/art/art01.png" alt="Art">
+                      <div class="swiper-body">
+                        <h2 class="swiper-body_title swiper-body_title_01">
+                            Win <span>3D printed</span> <br>miniature model
+                        </h2>
+                        <p class="swiper-body__desc">Bid now to avail these models and many other rewards on exclusive pieces.</p>
+                        <div class="swiper-body__buttons">
+                            <a href="#" class="swiper-body_btn swiper-body_buy">Buy Now</a>
+                            <a href="#" class="swiper-body_btn swiper-body_view">View NFT</a>
+                        </div>
+                      </div>
+                      <div class="swiper-footer">
+                          <div class="swiper-info">
+                              <p class="swiper-info__author">Maria Roman Generative</p>
+                              <p class="swiper-info__item">Token ID <span>AUXPO#66156</span></p>
+                              <p class="swiper-info__item">Creator <span>Enzo Tribbiani</span></p>
+                              <p class="swiper-info__item">Base Price <span>46 ETH</span></p>
+                              <p class="swiper-info__item">Limit <span>5 per wallet</span></p>
+                              <p class="swiper-info__item">Mint Date <span>5th March 2022</span></p>
+                          </div>
+                          <div class="swiper-cover">
+                              <img class="swiper-cover__img" src="images/cover/cover1.png" alt="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="swiper-slide__image" src="images/art/art02.png" alt="Art">
+                    <div class="swiper-body">
+                        <h2 class="swiper-body_title swiper-body_title_02">
+                            Get <span>10,000</span> <br>NFT for&nbsp;free
+                        </h2>
+                        <p class="swiper-body__desc">Bid now to avail these models and many other rewards on exclusive pieces.</p>
+                        <div class="swiper-body__buttons">
+                            <a href="#" class="swiper-body_btn swiper-body_buy">Buy Now</a>
+                            <a href="#" class="swiper-body_btn swiper-body_view">View NFT</a>
+                        </div>
+                      </div>
+                      <div class="swiper-footer">
+                        <div class="swiper-info">
+                            <p class="swiper-info__author">Maria Roman Generative</p>
+                            <p class="swiper-info__item">Token ID <span>AUXPO#66156</span></p>
+                            <p class="swiper-info__item">Creator <span>Enzo Tribbiani</span></p>
+                            <p class="swiper-info__item">Base Price <span>46 ETH</span></p>
+                            <p class="swiper-info__item">Limit <span>5 per wallet</span></p>
+                            <p class="swiper-info__item">Mint Date <span>5th March 2022</span></p>
+                        </div>
+                        <div class="swiper-cover">
+                            <img class="swiper-cover__img" src="images/cover/cover2.png" alt="">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="swiper-slide__image" src="images/art/art03.png" alt="Art">
+                    <div class="swiper-body">
+                        <h2 class="swiper-body_title swiper-body_title_03">
+                            Decorate <span>Twitter</span> <br>account
+                        </h2>
+                        <p class="swiper-body__desc">Bid now to avail these models and many other rewards on exclusive pieces.</p>
+                        <div class="swiper-body__buttons">
+                            <a href="#" class="swiper-body_btn swiper-body_buy">Buy Now</a>
+                            <a href="#" class="swiper-body_btn swiper-body_view">View NFT</a>
+                        </div>
+                      </div>
+                      <div class="swiper-footer">
+                        <div class="swiper-info">
+                            <p class="swiper-info__author">Maria Roman Generative</p>
+                            <p class="swiper-info__item">Token ID <span>AUXPO#66156</span></p>
+                            <p class="swiper-info__item">Creator <span>Enzo Tribbiani</span></p>
+                            <p class="swiper-info__item">Base Price <span>46 ETH</span></p>
+                            <p class="swiper-info__item">Limit <span>5 per wallet</span></p>
+                            <p class="swiper-info__item">Mint Date <span>5th March 2022</span></p>
+                        </div>
+                        <div class="swiper-cover">
+                            <img class="swiper-cover__img" src="images/cover/cover3.png" alt="">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </main>
     </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var count = ['1', '2', '3']
+        var art = ['Julius Caesar', 'Into the Abyss', 'Discobolous']
+        var price = ['221', '157', '95']
+        var swiper = new Swiper(".mySwiper", {
+          direction: "vertical",
+          slidesPerView: 1,
+          spaceBetween: 30,
+          mousewheel: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+            return '<p class="' + className + '">' + ('#0' + (count[index])) + '<span class="pagination-art">' + (art[index]) + '</span>' + '<span class="pagination-price">' + '<span>' + ((price[index]) + '</span>' + '' + 'ETH') + '</span>' + "</p>";
+          },
+          },
+        });
+      </script>
 </body>
 </html>

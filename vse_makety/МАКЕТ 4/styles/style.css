@@ -5,22 +5,24 @@ body {
     font-family: 'Catamaran', sans-serif;
 }
 
-body,
+body, 
 html {
-    height: 100vh; /*vh  пропорции по высоте*/
+    height: 100vh; /*vh - это едю измерения, кот помогает вычислять пропорции по высоте*/
 }
 
 .content {
     display: grid;
-    grid-template-columns: 110px 1fr;/* 1 колонка fr пропорции*/
+    grid-template-columns: 110px 1fr;
     grid-template-rows: 98px 1fr;
     height: 100%;
+    /*gap: 60px; /*esli ne 'gap' to logo prilipnet k krayu*/
+    /*gap - eto bezopasnoe prostranstvo*/
 }
 
 .content-sidebar {
-    border-right: 1px solid #505050;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    border-right: 1px solid /*splownaya liniya*/ #505050;
+    grid-column: 1 / 2; /* колонки линия c 1 колонки по 2ую*/
+    grid-row: 1 / 3; /*строчки линия с 1 по 3*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,25 +34,25 @@ html {
     height: 98px;
     background: linear-gradient(127.44deg, #505050 0%, #383838 100%);
     border: none;
-    position: relative;
+    position: relative; /*родительский*/
 }
 
 .content-sidebar__button::after {
     content: '';
     display: block;
-    width: 24px;
+    width: 24px; /*эти значения из background-size: 24px 24px;*/
     height: 24px;
     background-image: url(../images/menu.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
-    top: calc(50% - 12px);
-    left: calc(50% - 12px);
+    top: calc(50% - 12px); /*24/2 половина высоты*/
+    left: calc(50% - 12px); /*половина ширины*/
 }
 
 .content-sidebar__list {
-    list-style: none;
+    list-style: none; /*чтобы точки не виднелись*/
     margin-bottom: 60px;
     padding-left: 0;
 }
@@ -59,7 +61,7 @@ html {
     margin-top: 63px;
 }
 
-.content-sidebar__item:first-child {
+.content-header__item:first-child {
     margin-top: 0;
 }
 
@@ -67,7 +69,7 @@ html {
     display: block;
     width: 30px;
     height: 30px;
-    margin: 0 auto;
+    margin: 0 auto; /*pozvolit vystroit vse po centru*/
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -98,7 +100,7 @@ html {
     list-style: none;
     padding-left: 0;
     margin: 0;
-    display: flex;
+    display: flex;  /*vystroilis v odnu liniyu*/
     align-items: center;
 }
 
@@ -117,8 +119,8 @@ html {
     position: relative;
 }
 
-.content-header__link::after {
-    content: '';
+.content-header__link::after /*eto psevdoelement*/{ 
+    content: ''; /*bez etogo ne budet rabotat*/
     width: 22px;
     height: 2px;
     background-color: #fff;
@@ -131,6 +133,8 @@ html {
 
 .content-header__link.active {
     font-weight: 800;
+    /*dobavim chertochku*/
+    /*position: relative;*/
 }
 
 .content-header__link.active::after,
@@ -199,24 +203,24 @@ html {
     position: relative;
 }
 
-.swiper-body__title span::before,
+.swiper-body__title span::before, 
 .swiper-body__title span::after {
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
-.swiper-body__title_01 span::before,
+.swiper-body__title_01 span::before, 
 .swiper-body__title_01 span::after {
     content: '3D printed';
 }
 
-.swiper-body__title_02 span::before,
+.swiper-body__title_02 span::before, 
 .swiper-body__title_02 span::after {
     content: '10,000';
 }
 
-.swiper-body__title_03 span::before,
+.swiper-body__title_03 span::before, 
 .swiper-body__title_03 span::after {
     content: 'Twitter';
 }
@@ -266,13 +270,14 @@ html {
     box-shadow: 0 0 0 6px #fff;
 }
 
+
 .swiper-body__buy::before,
 .swiper-body__buy::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: -1
 }
 
 .swiper-body__buy::before {
@@ -292,7 +297,7 @@ html {
     font-size: 16px;
     color: #fff;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid/*сплошная линия*/ #fff;
     padding: 14px 21px 14px 52px;
 }
 
@@ -323,11 +328,23 @@ html {
     flex-basis: 203px;
 }
 
-.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-vertical.swiper-pagination-bullets,swiper-pagination-bullet,
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullet {
     margin-top: 45px;
     margin-bottom: 45px;
 }
+
+/*.swiper-slide {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    transition-property: transform;
+    position: inherit;
+}*/
 
 .swiper-pagination-bullet {
     background: transparent;
@@ -335,8 +352,14 @@ html {
     height: inherit;
     text-align: left;
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 800; /*жирность*/
 }
+
+/*.swiper-pagination-bullet-active {
+    background: transparent;
+    font-size: 34px;
+    font-weight: 800;
+}*/
 
 .pagination-art {
     font-size: 17px;
@@ -346,7 +369,7 @@ html {
     margin-top: 10px;
 }
 
-.pagination-art::before {
+.position-art::before {
     content: '';
     width: 200px;
     height: 1px;
@@ -400,13 +423,12 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-
 .swiper-info {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto 1fr;
     gap: 5%;
-    flex-basis: calc(100% - 360px);
+    flex-basis: calc(100% - 225px - 137px);
     padding-left: 60px;
 }
 
@@ -869,3 +891,53 @@ html {
         height: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

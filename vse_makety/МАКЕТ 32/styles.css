@@ -1,0 +1,165 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "Eina", sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #222222;
+    background-color: #fff;
+}
+
+header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+// Header-v2
+.header-v2 {
+    .header-center {
+        @media(min-width: $screen-md) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 0;
+        }
+        .topbar-left {
+            margin-left: 98px;
+        }
+    }
+
+
+.topbar {
+    padding-bottom: 11px !important;
+}
+
+.topbar {
+    background: #f7f7f7;
+    padding: 16px 0;
+}
+
+.topbar.hidden-xs.hidden-sm.homepage2.home1 {
+    border-bottom: 1px solid #a2ddf7;
+
+    a {
+        color: #fff;
+        font-family: $font-roboto;
+        font-size: 14px;
+    }
+}
+
+.container.container-content.header-home3 {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  .container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.col-md-5.col-sm-8.col-xs-12.logo.col-header-left-home3 {
+    display: none;
+}
+
+.col-md-3.col-sm-12.col-xs-12.header-center2 {
+    text-align: center; 
+} 
+
+.topbar .topbar-left {
+    display: flex;
+}
+
+.topbar-left .element {
+    &:first-child {
+        &:before {
+            border: 0;
+        }
+    }
+}
+
+.topbar-left.homepage-v1 a,
+.topbar-right.homepage-v1 a,
+a.menu-home-3 {
+    color: $color-text;
+    font-family: $font-roboto;
+    font-size: 14px;
+}
+
+.header-v6 .topbar-left {
+    float: left;
+    text-align: left; 
+}
+
+.a {
+    display: contents;
+}
+
+ul.color-hp3 a {
+    background: #fff !important;
+    color: $color-text !important;
+
+    &:hover {
+        color: #7cd0f5 !important;
+    }
+}
+
+.topbar-left.homepage-v1 a, .topbar-right.homepage-v1 a, a.menu-home-3 {
+    color: #4c4b6c;
+    font-family: roboto;
+    font-size: 14px;
+}
+
+.a a {
+    border-right: 1px solid #dddddd;
+    padding-right: 80px;
+}
+.topbar a {
+    font-size: 13px;
+    letter-spacing: 0.01em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
